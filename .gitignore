@@ -6,3 +6,10 @@ bower_components
 /dist
 build/reports
 coverage
+# Ignore compiled Typescript files
+src/**/*.map
+src/**/*.js
+test/e2e/src/**/*.map
+test/e2e/src/**/*.js
+test/unit/**/*.map
+test/unit/**/*.js
