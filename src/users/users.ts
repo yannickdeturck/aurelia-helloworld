@@ -2,10 +2,16 @@ import {autoinject} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-fetch-client';
 import 'fetch';
 
+class User {
+  login: string;
+  avatar_url: string;
+  html_url: string;
+}
+
 @autoinject
 export class Users {
   heading: string = 'Github Users';
-  users: any[] = [];
+  users: User[] = [];
 
   constructor(private http: HttpClient) {
     http.configure(config => {
