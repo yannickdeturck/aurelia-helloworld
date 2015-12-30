@@ -1,10 +1,13 @@
 import {computedFrom} from 'aurelia-framework';
+import {Helloworld} from "./helloworld";
 
 export class Welcome {
   heading = 'Welcome to the Aurelia Navigation App!';
   firstName = 'John';
   lastName = 'Doe';
   previousValue = this.fullName;
+  //helloworldName: String = "hi";
+  hw: Helloworld;
 
   //Getters can't be directly observed, so they must be dirty checked.
   //However, if you tell Aurelia the dependencies, it no longer needs to dirty check the property.
@@ -17,7 +20,7 @@ export class Welcome {
 
   submit() {
     this.previousValue = this.fullName;
-    alert(`Welcome, ${this.fullName}!`);
+    alert(`Welcome, ${this.fullName}! The custom component's name is '${this.hw.name}'.`);
   }
 
   canDeactivate() {

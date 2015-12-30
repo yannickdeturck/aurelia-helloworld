@@ -1,0 +1,20 @@
+<template>
+    <section>
+        <h2>Hello World</h2>
+        <form class="form-horizontal" role="form" submit.trigger="submit()">
+            <div class="form-group">
+                <label for="name" class="col-sm-3 control-label">What's your name?</label>
+                <div class="col-sm-3">
+                    <input type="text" value.bind="name" class="form-control" id="name" placeholder="name">
+                </div>
+            </div>
+        </form>
+        <div show.bind="!name">
+            Please enter your name.
+        </div>
+        <div show.bind="name">
+            Why! Hello there, ${name}!<br/>
+            ${extraGreeting}
+        </div>
+    </section>
+</template>

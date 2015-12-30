@@ -1,4 +1,5 @@
 <template>
+  <require from="./helloworld"></require>
   <section class="au-animate">
     <h2>${heading}</h2>
     <form role="form" submit.delegate="submit()">
@@ -16,5 +17,8 @@
       </div>
       <button type="submit" class="btn btn-default">Submit</button>
     </form>
+    <!-- We can either bind the name variable directly or just use a reference to the custom component's view model -->
+    <!--<helloworld name.bind="helloworldName"></helloworld>-->
+    <helloworld view-model.ref="hw"></helloworld>
   </section>
 </template>

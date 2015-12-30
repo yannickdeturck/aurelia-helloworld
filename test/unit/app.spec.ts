@@ -26,7 +26,7 @@ describe('the App module', () => {
   });
 
   it('configures the router title', () => {
-    expect(sut.router.title).toEqual('Aurelia');
+    expect(sut.router.title).toEqual('Aurelia Hello World');
   });
 
   it('should have a welcome route', () => {
@@ -39,5 +39,9 @@ describe('the App module', () => {
 
   it('should have a child router route', () => {
     expect(sut.router.routes).toContain({ route: 'child-router', name: 'child-router', moduleId: 'child-router', nav: true, title:'Child Router' });
+  });
+
+  it('should have a helloworld route', () => {
+    expect(sut.router.routes).toContain({ route: ['helloworld', 'helloworld/:id'], name: 'helloworld', moduleId: 'helloworld', nav: true, title:'Hello World' });
   });
 });
