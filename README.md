@@ -1,6 +1,6 @@
 # Aurelia Hello World
 
-## Requisites
+## Prerequisites
 * NodeJS
 * Gulp installed globally: `npm install -g gulp`
 * jspm installed globally: `npm install -g jspm`
